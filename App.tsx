@@ -15,6 +15,7 @@ import {
 import Hello from './views/Hello';
 import MyActivityIndicator from './views/MyActivityIndicator';
 import MyFlatList from './views/MyFlatList';
+import MyImage from './views/MyImage';
 import SwitchComponente from './views/SwitchComponente';
 
 const App = () => {
@@ -23,7 +24,8 @@ const App = () => {
       {/* <Hello name={"Andres Arana"}/> */}
       {/* <SwitchComponente /> */}
       {/* <MyActivityIndicator/> */}
-      <MyFlatList />
+      {/* <MyFlatList /> */}
+      <MyImage />
     </SafeAreaView>
   );
 };
