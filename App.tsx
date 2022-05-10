@@ -11,15 +11,12 @@
 import React from 'react';
 import {
   Button,
+  SafeAreaView,
   StyleSheet,
   Text,
-  useColorScheme,
+  TouchableOpacity,
   View,
 } from 'react-native';
-
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
 
 export type Props = {
   name: String;
@@ -30,6 +27,7 @@ const Hello: React.FC<Props> = ({
   name,
   baseEnthusiasmLevel = 0
 }) => {
+
   const [enthusiasmLevel, setEnthusiasmLevel] = React.useState(
     baseEnthusiasmLevel
   );
@@ -42,50 +40,92 @@ const Hello: React.FC<Props> = ({
 
   return (
     <View style={styles.sectionContainer}>
-      <Text style={styles.greeting}>
-        Hello my dear {name}
-        {getExclamationMarks(enthusiasmLevel)}
+      <Text style={styles.title}>
+        Hello there!
       </Text>
-      <View>
-        <Button
-          title='Increase enthusiasm'
+      <Text style={styles.text}>
+        My name is {name}
+      </Text>
+      <Text style={styles.text}>
+        and my current enthusiasm level is:
+      </Text>
+      <Text style={styles.text}>
+        {enthusiasmLevel}
+      </Text>
+      <View style={styles.buttons}>
+        <TouchableOpacity 
           accessibilityLabel='increment'
           onPress={onIncrement}
-          color="blue"
-          />
-        <Button
-          title='Decrease enthusiasm'
+          >
+          <View style={styles.incrementButton}>
+            <Text style={styles.buttonText}>
+              {'Decrement \nenthusiams'}
+            </Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity 
           accessibilityLabel='decrement'
           onPress={onDecrement}
-          color="red"
-        />
+          >
+          <View style={styles.decrementButton}>
+            <Text style={styles.buttonText}>
+              {'Decrement \nenthusiams'}
+            </Text>
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   )
 }
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <Hello name={"Andres Arana"}/>
+    <SafeAreaView>
+      <Hello name={"Andres Arana"}/>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   sectionContainer: {
-    flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },
-  greeting: {
-    fontSize: 20,
+  title: {
+    fontFamily: "Helvetica",
+    fontSize: 30,
     fontWeight: "bold",
-    margin: 16,
+    margin: 20,
+    marginBottom: 80,
+  },
+  text: {
+    fontFamily: "Helvetica",
+    fontSize: 20,
+    marginVertical: 10,
+  },
+  buttons: {
+    alignSelf: "stretch",
+    flexDirection: "row-reverse",
+    justifyContent: "space-evenly",
+    padding: 10,
+    marginTop: 20,
+  },
+  decrementButton: {
+    backgroundColor: "red",
+    padding: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+  },
+  incrementButton: {
+    backgroundColor: "blue",
+    padding: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+  },
+  buttonText: {
+    fontFamily: "Helvetica",
+    fontSize: 16,
+    color: "white",
   }
 });
 
