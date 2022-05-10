@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import Hello from './views/Hello';
 import MyActivityIndicator from './views/MyActivityIndicator';
+import MyFlatList from './views/MyFlatList';
 import SwitchComponente from './views/SwitchComponente';
 
 const App = () => {
@@ -21,7 +22,8 @@ const App = () => {
     <SafeAreaView style={{flex: 1}}>
       {/* <Hello name={"Andres Arana"}/> */}
       {/* <SwitchComponente /> */}
-      <MyActivityIndicator/>
+      {/* <MyActivityIndicator/> */}
+      <MyFlatList />
     </SafeAreaView>
   );
 };
