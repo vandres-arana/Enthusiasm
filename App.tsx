@@ -20,6 +20,7 @@ import MyImageBackground from './views/MyImageBackground';
 import MyKeyboardAvoidingView from './views/MyKeyboardAvoidingView';
 import MyModal from './views/MyModal';
 import MyPressable from './views/MyPressable';
+import MyRefreshControl from './views/MyRefreshControl';
 import SwitchComponente from './views/SwitchComponente';
 
 const App = () => {
@@ -33,7 +34,8 @@ const App = () => {
       {/* <MyImageBackground /> */}
       {/* <MyKeyboardAvoidingView /> */}
       {/* <MyModal /> */}
-      <MyPressable />
+      {/* <MyPressable /> */}
+      <MyRefreshControl />
     </SafeAreaView>
   );
 };
