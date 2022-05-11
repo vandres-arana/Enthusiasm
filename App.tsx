@@ -16,6 +16,7 @@ import Hello from './views/Hello';
 import MyActivityIndicator from './views/MyActivityIndicator';
 import MyFlatList from './views/MyFlatList';
 import MyImage from './views/MyImage';
+import MyImageBackground from './views/MyImageBackground';
 import SwitchComponente from './views/SwitchComponente';
 
 const App = () => {
@@ -25,7 +26,8 @@ const App = () => {
       {/* <SwitchComponente /> */}
       {/* <MyActivityIndicator/> */}
       {/* <MyFlatList /> */}
-      <MyImage />
+      {/* <MyImage /> */}
+      <MyImageBackground />
     </SafeAreaView>
   );
 };
