@@ -18,6 +18,7 @@ import MyFlatList from './views/MyFlatList';
 import MyImage from './views/MyImage';
 import MyImageBackground from './views/MyImageBackground';
 import MyKeyboardAvoidingView from './views/MyKeyboardAvoidingView';
+import MyModal from './views/MyModal';
 import SwitchComponente from './views/SwitchComponente';
 
 const App = () => {
@@ -29,7 +30,8 @@ const App = () => {
       {/* <MyFlatList /> */}
       {/* <MyImage /> */}
       {/* <MyImageBackground /> */}
-      <MyKeyboardAvoidingView />
+      {/* <MyKeyboardAvoidingView /> */}
+      <MyModal />
     </SafeAreaView>
   );
 };
