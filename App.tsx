@@ -21,6 +21,7 @@ import MyKeyboardAvoidingView from './views/MyKeyboardAvoidingView';
 import MyModal from './views/MyModal';
 import MyPressable from './views/MyPressable';
 import MyRefreshControl from './views/MyRefreshControl';
+import MyScrollView from './views/MyScrollView';
 import SwitchComponente from './views/SwitchComponente';
 
 const App = () => {
@@ -35,7 +36,8 @@ const App = () => {
       {/* <MyKeyboardAvoidingView /> */}
       {/* <MyModal /> */}
       {/* <MyPressable /> */}
-      <MyRefreshControl />
+      {/* <MyRefreshControl /> */}
+      <MyScrollView />
     </SafeAreaView>
   );
 };
